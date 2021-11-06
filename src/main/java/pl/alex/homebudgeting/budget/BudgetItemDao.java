@@ -35,10 +35,9 @@ public class BudgetItemDao {
             throw new RuntimeException(e);
         }
     }
-
-    public List<BudgetItem> findAllByType(BudgetItemType type){
+    public List<BudgetItem> findAllItemsByType(BudgetItemType type){
         final String sql = "SELECT description, value,type FROM budget_item WHERE type=?";
-        List<BudgetItem>items = new ArrayList<>();
+        List<BudgetItem> items = new ArrayList<>();
         try(Connection connection = dataSource.getConnection();
             PreparedStatement statement = connection.prepareStatement(sql)){
             statement.setString(1,type.name());
