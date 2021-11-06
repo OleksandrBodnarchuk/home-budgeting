@@ -1,0 +1,10 @@
+<Context>
+    <Resource name="jdbc/database"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              type="javax.sql.DataSource"
+              username="name"
+              password="password"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/database?serverTimezone=Europe/Warsaw"/>
+    />
+</Context>
